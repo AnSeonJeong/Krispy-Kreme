@@ -156,7 +156,6 @@ a {
 }
 
 #footer {
-  width: 100%;
   font-family: "Noto-Sans", sans-serif;
 }
 
@@ -168,6 +167,7 @@ a {
 
 .footer_box {
   width: 33%;
+  height: 158px;
   margin: 71px 0;
   float: left;
   box-sizing: border-box;
