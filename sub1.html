@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,6 +7,7 @@
     <title>Krispy Kreme Doughuts Menu</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header_and_footer.css" />
+    <link rel="stylesheet" href="css/sub.css" />
   </head>
   <body>
     <header id="header">
@@ -17,28 +18,45 @@
           </a>
         </h1>
         <nav class="nav nav_menu">
-          <ul class="menu">
+          <ul class="main menu">
             <li>
-              <a href="">BRAND</a>
+              <a href="sub1.html">BRAND</a>
+              <ul class="sub">
+                <li>Story</li>
+                <li>History</li>
+                <li>Share The Love</li>
+              </ul>
             </li>
             <li>
-              <a href="">MENU</a>
+              <a href="sub2.html">PRODUCT</a>
+              <ul class="sub">
+                <li>All</li>
+                <li>Doughnuts</li>
+                <li>Coffee / Drink</li>
+                <li>Icecream / Frozen</li>
+              </ul>
             </li>
             <li>
               <a href="#">COMMUNITY</a>
+              <ul class="sub">
+                <li>Event</li>
+                <li>Customer Service</li>
+                <li>Survey</li>
+                <li>Notice</li>
+              </ul>
             </li>
             <li>
               <a href="#">STORE</a>
-            </li>
-            <li>
-              <a href="">HOMESERVICE</a>
+              <ul class="sub">
+                <li>Franchise</li>
+              </ul>
             </li>
           </ul>
         </nav>
       </div>
       <div class="right">
         <nav class="nav nav_member">
-          <ul class="member">
+          <ul class="main member">
             <li>
               <a href="#">Login</a>
             </li>
@@ -57,117 +75,269 @@
       </div>
     </header>
     <!-- header -->
-    <section id="contentWrap">
-      <div id="content_banner">
-        <h1></h1>
-        <span></span>
+    <main class="contentWrap">
+      <div class="content_banner sub_1">
+        <h1>About Krispy Kreme</h1>
+        <span>1937년부터 이어져온 크리스피크림의 발자취</span>
       </div>
-      <div id="story">
-        <h1 class="content_title"></h1>
-        <div class="story_box">
-          <ul class="story_1">
-            <li class="story_img">
-              <video src="" alt="" />
-              <div></div>
-            </li>
-            <li class="story_desc">
-              <h2></h2>
-              <p></p>
-            </li>
-          </ul>
-          <ul class="story_2">
-            <li class="story_desc">
-              <h2></h2>
-              <p></p>
-            </li>
-            <li class="neon">
-              <img src="" alt="" />
-            </li>
-            <li class="story_img">
-              <img src="" alt="" />
-              <div></div>
-            </li>
-          </ul>
-          <ul class="story_3">
-            <li class="story_img">
-              <img src="" alt="" />
-              <div></div>
-            </li>
-            <li class="story_desc">
-              <h2></h2>
-              <p></p>
-            </li>
-          </ul>
-          <ul class="story_4">
-            <li class="story_desc">
-              <h2></h2>
-              <p></p>
-            </li>
-            <li class="story_img">
-              <img src="" alt="" />
-            </li>
-          </ul>
+      <section id="story">
+        <div class="bg">
+          <img src="images/story_bg(1).png" alt="story_bg" />
+          <img src="images/story_bg(2).png" alt="story_bg" />
         </div>
-      </div>
-      <!-- story -->
-      <div id="history">
-        <h1 class="content_title"></h1>
-        <div class="history_box">
-          <img src="" alt="year" />
-          <div class="history_wrap">
-            <div class="history_img">
-              <img src="" alt="history" />
-              <div></div>
+        <h1 class="content_title">
+          <span>Our Story</span>
+        </h1>
+        <div class="story_box clear">
+          <div class="story_wrap story_1 clear">
+            <div class="story_content except">
+              <iframe
+                width="700"
+                height="394"
+                src="https://www.youtube.com/embed/xryQn9uaEM4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="history_content">
-              <div class="history_desc">
-                <h2></h2>
-                <p></p>
-              </div>
-              <div class="history_btn">
-                <img src="" alt="prev" />
-                <img src="" alt="next" />
-              </div>
+            <div class="story_desc">
+              <h2>도넛 극장을 통한 오감 만족</h2>
+              <p>
+                여러분은 도넛 극장을 통해 따뜻한 오리지널 글레이즈드를<br />
+                맛보기까지의 모든 과정을 체험할 수 있습니다.<br />
+                달콤한 향기,반짝거리는 글레이즈, 방금 만들어진 도넛이 손에<br />
+                닿았을 때의 그온기, 입안에 넣었을 때의 촉촉함… <br />
+                크리스피 크림에서는 이 모든 과정을 경험할 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="story_wrap story_2 clear">
+            <div class="story_desc">
+              <h2>따뜻한 도넛 체험</h2>
+              <p>
+                HOT NOW 네온사인이 켜졌을 때 매장에 방문하시면 바로 나온<br />
+                “따뜻한 오리지널 글레이즈드”를 체험하실 수 있습니다.<br />
+                입 안에 넣자마자 사르르 녹아 버리는 바로 그 맛. 기다리시는 동안
+                경험하실 수 있습니다.
+              </p>
+            </div>
+            <!-- <div class="neon">
+            </div> -->
+            <div class="story_content">
+              <img src="images/hot_light.gif" class="neon" alt="hot_light" />
+              <img src="images/brand_story(1).jpg" alt="brand_stroy" />
+            </div>
+          </div>
+          <div class="story_wrap story_3 clear">
+            <div class="story_content">
+              <img src="images/brand_story(2).jpg" alt="brand_stroy" />
+            </div>
+            <div class="story_desc">
+              <h2>
+                Customer Relationship Specialist<br />
+                (고객관계전문가)
+              </h2>
+              <p>
+                크리스피 크림의 CRS는 기존 서비스 방식에서 탈피한 새로운
+                서비스를 제공합니다.<br />
+                CRS들은 고객들의 가장 가까운 곳에서 고객들의 말씀에 귀 기울이며
+                고객이 원하는 최고의 경험을 할 수 있도록 고객의 가장 가까운
+                곳에서 노력합니다.
+              </p>
+            </div>
+          </div>
+          <div class="story_wrap story_4 clear">
+            <div class="story_desc">
+              <h2>Dozen Box</h2>
+              <p>
+                크리스피 크림의 달콤한 먹는 맛과 도넛의 예쁜 모양을 보는 맛의
+                비밀, 바로 더즌 박스 입니다.<br />
+                특별한 날이 되면 크리스피 크림의 더즌박스도 옷을 갈아입고
+                여러분을 기다립니다.<br />
+                더욱 특별하게, 더욱 맛있게 크리스피 크림이 드리는 작은 선물
+                입니다.
+              </p>
+            </div>
+            <div class="story_content except">
+              <img src="images/brand_story(3).png" alt="brand_stroy" />
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!-- story -->
+      <section id="history">
+        <h1 class="content_title"><span>Our History</span></h1>
+        <div class="history_box clear">
+          <img src="images/history_timeline.png" alt="timeline" />
+          <div class="history_content">
+            <div class="history_slide">
+              <div class="history_wrap">
+                <img src="images/brand_history(1).jpg" alt="history" />
+                <div class="history_desc">
+                  <h2>We Opened Our Doors</h2>
+                  <p>
+                    크리스피 크림 도넛의 설립자인 버논 루돌프는 1937년 7월 13일,
+                    현재 구 시가지 Old-Salem이라고 불리는 North Carolina 주의
+                    Winston-Salem에 위치한 건물을 빌려서 지역 식료품점을
+                    대상으로 크리스피 크림 도넛을 판매하기 시작했습니다. 판매를
+                    시작한지 얼마 되지 않아 사람들은 매장 앞에 멈추어 서서
+                    따뜻한 도넛을 살 수 있는지 물어보기 시작하였고, 루돌프는
+                    매장 벽에 구멍을 뚫어서 고객들에게 직접 따뜻한 오리지널
+                    글레이즈드 도넛을 판매하게 됩니다.
+                  </p>
+                </div>
+              </div>
+              <div class="history_wrap">
+                <img src="images/brand_history(2).jpg" alt="history" />
+                <div class="history_desc">
+                  <h2>
+                    Improving The Doughnut<br />
+                    Making Process
+                  </h2>
+                  <p>
+                    40~50년대까지 크리스피 크림은 주로 가족이 경영하는 소규모의
+                    체인점 형태 였기 때문에 모든 과정을 처음부터 시작해야
+                    했습니다. 그래서 크리스피 크림은 자체적인 믹스공장을 세우고
+                    유통 시스템을 만들어서 각 크리스피 크림 매장에 도넛 믹스를
+                    배당하기 시작하였고, 더 나아가 크리스피 크림만의 도넛 기계를
+                    고안해서 생산하기에 이르렀습니다. 1950년대부터 루돌프와 기계
+                    기술자들은 도넛을 만드는 과정을 개선하고 자동화 하는 것에
+                    초점을 맞추게 됩니다.
+                  </p>
+                </div>
+              </div>
+              <div class="history_wrap">
+                <img src="images/brand_history(3).jpg" alt="history" />
+                <div class="history_desc">
+                  <h2>
+                    Our Stores Are Familiar<br />
+                    Gathering Places
+                  </h2>
+                  <p>
+                    1960년대, 크리스피 크림은 남동부를 중심으로 꾸준히 성장하고
+                    있었고, 조금씩 외부로 진출하고 있었습니다. 이 때가 바로
+                    크리스피 크림 매장의 독특한 녹색 타일 지붕과 전통적인 도로
+                    사인을 포함한 일관성 있는 디자인을 확립한 시기입니다. 1973년
+                    창립자인 버논 루돌프가 죽으면서 침체기를 맞이하였고,1976년
+                    베아트리체 푸드에 매각됩니다.
+                  </p>
+                </div>
+              </div>
+              <div class="history_wrap">
+                <img src="images/brand_history(4).jpg" alt="history" />
+                <div class="history_desc">
+                  <h2>Hot Doughnut Experience</h2>
+                  <p>
+                    “따뜻한 도넛 체험 (Hot doughnut experience)”을 회사의
+                    슬로건으로 부각시키면서, 1996년에 남동부외의 지역에서는
+                    최초로 뉴욕에 매장을 오픈 하였습니다. 1999년에는
+                    캘리포니아에 첫 매장을 오픈하고, 미국 전 지역으로 사업영역을
+                    넓혀갔습니다. 회사가 설립된지 60년이 되던 1997년에는
+                    스미소니언 미국역사 박물관에 회사의 artifact를 기증함으로써
+                    크리스피 크림은 미국의 대표적인 상품임을 인정 받게 됩니다.
+                  </p>
+                </div>
+              </div>
+              <div class="history_wrap">
+                <img src="images/brand_history(5).jpg" alt="history" />
+                <div class="history_desc">
+                  <h2>
+                    The Krispy Kreme<br />
+                    Experience
+                  </h2>
+                  <p>
+                    Expansion, Innovation, Extending!!<br /><br />
+                    21세기에도 크리스피 크림의 성장은 멈추지 않습니다. 크리스피
+                    크림은 미국, 캐나나, 호주, 영국, 멕시코, 한국, 일본,
+                    인도네시아, 필리핀, 두바이, 쿠웨이트, 사우디아라비아, 중국
+                    등의 나라에서 고객과 만나고 있습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="history_wrap">
+                <img src="images/brand_history(6).jpg" alt="history" />
+                <div class="history_desc">
+                  <h2>
+                    Open Asia first store <br />
+                    in Korea
+                  </h2>
+                  <p>
+                    2004년 12월 16일 아시아 최초로 한국에서 HOT NOW 네온 사인을
+                    켰습니다. 그로부터 10년후, 100호점인 동시에 아시아 300호점
+                    ‘전북도청점’의 문을 열었습니다.<br /><br />
+                    크리스피 크림은 전국 100여개 매장에서 따뜻하고 신선한 도넛을
+                    만들며 고객과 만나고 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="history_btn">
+              <button class="prev"></button>
+              <button class="next"></button>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- history -->
-      <div id="share_the_love">
-        <h1 class="content_title"></h1>
+      <section id="share_the_love">
+        <h1 class="content_title">
+          <span>Share The Love</span>
+        </h1>
         <ul>
           <li>
-            <img src="" alt="더했습니다." />
+            <img src="images/share_the_love(1).png" alt="plus" />
             <div class="content_desc">
-              <h2></h2>
-              <p></p>
+              <div class="title">
+                <img src="images/sign_plus.png" alt="sign_plus" />
+                <h2>더했습니다.</h2>
+              </div>
+              <p>
+                크리스피 크림 도넛은 당일 방금 생산한 도넛만을 판매하여 신선함을
+                더했습니다.
+              </p>
             </div>
           </li>
           <li>
-            <img src="" alt="뺐습니다." />
+            <img src="images/share_the_love(2).png" alt="minus" />
             <div class="content_desc">
-              <h2></h2>
-              <p></p>
+              <div class="title">
+                <img src="images/sign_minus.png" alt="sign_minus" />
+                <h2>뺐습니다.</h2>
+              </div>
+              <p>CO2배출이 전혀 없는 생산방식으로 지구 환경을 보호합니다.</p>
             </div>
           </li>
           <li>
-            <img src="" alt="나눕니다." />
+            <img src="images/share_the_love(3).png" alt="divid" />
             <div class="content_desc">
-              <h2></h2>
-              <p></p>
+              <div class="title">
+                <img src="images/sign_divid.png" alt="sign_divid" />
+                <h2>나눕니다.</h2>
+              </div>
+              <p>
+                나누어 먹으면 가격도 내려갑니다. 특별한 더즌 가격으로 나눔이
+                더욱 즐거워 집니다!
+              </p>
             </div>
           </li>
           <li>
-            <img src="" alt="배가됩니다." />
+            <img src="images/share_the_love(4).png" alt="multi" />
             <div class="content_desc">
-              <h2></h2>
-              <p></p>
+              <div class="title">
+                <img src="images/sign_multi.png" alt="sign_multi" />
+                <h2>배가 됩니다.</h2>
+              </div>
+              <p>
+                크리스피 크림은 다양한 사회 공헌 활동을 통해 고객들에게 받은
+                사랑을 환원하고 있습니다.
+              </p>
             </div>
           </li>
         </ul>
-      </div>
+      </section>
       <!-- share the love -->
-    </section>
+    </main>
     <!-- contents -->
     <footer id="footer">
       <div class="footer_contents">
@@ -191,7 +361,7 @@
           </div>
         </div>
         <div class="footer_box">
-          <img src="images/footer_logo.png" alt="footer_logo" />
+          <img src="images/footer_logo_2.png" alt="footer_logo" />
         </div>
         <div class="footer_box">
           <ul class="footer_menu">
@@ -204,19 +374,19 @@
           </ul>
           <ul class="footer_sns">
             <li>
-              <a href="https://www.facebook.com/kkdkorea1937"
-                ><img src="images/sns (1).png" alt="face-book"
-              /></a>
+              <a href="https://www.facebook.com/kkdkorea1937">
+                <img src="images/sns(1).png" alt="face-book" />
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/krispykremekr"
-                ><img src="images/sns (2).png" alt="twitter"
-              /></a>
+              <a href="https://twitter.com/krispykremekr">
+                <img src="images/sns(2).png" alt="twitter" />
+              </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/krispykremekr/"
-                ><img src="images/sns (3).png" alt="instagram"
-              /></a>
+              <a href="https://www.instagram.com/krispykremekr/">
+                <img src="images/sns(3).png" alt="instagram" />
+              </a>
             </li>
           </ul>
         </div>

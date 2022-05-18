@@ -7,7 +7,8 @@
     <title>Krispy Kreme Doughuts Menu</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header_and_footer.css" />
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/sub.css" />
+    <script src="js/menu.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -18,28 +19,45 @@
           </a>
         </h1>
         <nav class="nav nav_menu">
-          <ul class="menu">
+          <ul class="main menu">
             <li>
-              <a href="">BRAND</a>
+              <a href="sub1.html">BRAND</a>
+              <ul class="sub">
+                <li>Story</li>
+                <li>History</li>
+                <li>Share The Love</li>
+              </ul>
             </li>
             <li>
-              <a href="">MENU</a>
+              <a href="sub2.html">PRODUCT</a>
+              <ul class="sub">
+                <li>All</li>
+                <li>Doughnuts</li>
+                <li>Coffee / Drink</li>
+                <li>Icecream / Frozen</li>
+              </ul>
             </li>
             <li>
               <a href="#">COMMUNITY</a>
+              <ul class="sub">
+                <li>Event</li>
+                <li>Customer Service</li>
+                <li>Survey</li>
+                <li>Notice</li>
+              </ul>
             </li>
             <li>
               <a href="#">STORE</a>
-            </li>
-            <li>
-              <a href="">HOMESERVICE</a>
+              <ul class="sub">
+                <li>Franchise</li>
+              </ul>
             </li>
           </ul>
         </nav>
       </div>
       <div class="right">
         <nav class="nav nav_member">
-          <ul class="member">
+          <ul class="main member">
             <li>
               <a href="#">Login</a>
             </li>
@@ -58,96 +76,79 @@
       </div>
     </header>
     <!-- header -->
-    <section id="content_wrap">
-      <div id="content_banner">
-        <h1></h1>
-        <span></span>
+    <main class="content_wrap">
+      <div class="content_banner sub_2">
+        <h1>Krispy Kreme's Menu</h1>
+        <span>다양한 크리스피크림 도넛의 세계로 초대합니다.</span>
       </div>
-      <div id="product">
+      <section id="product">
         <div class="wrap">
           <h1 class="title">
             <span>This Month's Product</span>
           </h1>
-          <ul class="content">
-            <li class="product_btn">
-              <img src="images/product_prev.png" alt="prev" />
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img
-                  src="images/product_bg(1).jpg"
-                  class="hidden"
-                  alt="background"
-                />
-                <img src="images/product(1).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 블라썸</li>
-                <li>Strawberry Blossom</li>
-              </ul>
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img
-                  src="images/product_bg(2).jpg"
-                  class="hidden"
-                  alt="background"
-                />
-                <img src="images/product(2).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 티라미수 크림</li>
-                <li>Strawberry Tiramisu Cream</li>
-              </ul>
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img
-                  src="images/product_bg(3).jpg"
-                  class="hidden"
-                  alt="background"
-                />
-                <img src="images/product(3).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 에끌레어</li>
-                <li>Strawberry Eclair</li>
-              </ul>
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img
-                  src="images/product_bg(4).jpg"
-                  class="hidden"
-                  alt="background"
-                />
-                <img src="images/product(4).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 브라운 치즈</li>
-                <li>Strawberry Brown Cheese</li>
-              </ul>
-            </li>
-            <li class="product_btn">
-              <img src="images/product_next.png" alt="next" />
-            </li>
-          </ul>
+          <div class="center">
+            <button class="product_btn product_prev"></button>
+            <ul class="content">
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(1).jpg" alt="background" />
+                  <img src="images/product(1).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 블라썸</li>
+                  <li>Strawberry Blossom</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(2).jpg" alt="background" />
+                  <img src="images/product(2).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 티라미수 크림</li>
+                  <li>Strawberry Tiramisu Cream</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(3).jpg" alt="background" />
+                  <img src="images/product(3).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 에끌레어</li>
+                  <li>Strawberry Eclair</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(4).jpg" alt="background" />
+                  <img src="images/product(4).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 브라운 치즈</li>
+                  <li>Strawberry Brown Cheese</li>
+                </ul>
+              </li>
+            </ul>
+            <button class="product_btn product_next"></button>
+          </div>
         </div>
-      </div>
-      <div class="menu">
+      </section>
+      <section class="menu">
         <ul class="category">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>전체</li>
+          <li>도넛</li>
+          <li>커피 / 음료</li>
+          <li>아이스크림 / 프로즌</li>
         </ul>
-        <div class="menu_box">
+        <div class="menu_box clear">
           <ul class="doughnuts"></ul>
           <ul class="drink"></ul>
           <ul class="ice"></ul>
         </div>
-      </div>
-    </section>
+        <button>more</button>
+      </section>
+    </main>
     <!-- contents -->
     <footer id="footer">
       <div class="footer_contents">
@@ -171,7 +172,7 @@
           </div>
         </div>
         <div class="footer_box">
-          <img src="images/footer_logo.png" alt="footer_logo" />
+          <img src="images/footer_logo_2.png" alt="footer_logo" />
         </div>
         <div class="footer_box">
           <ul class="footer_menu">
@@ -184,19 +185,19 @@
           </ul>
           <ul class="footer_sns">
             <li>
-              <a href="https://www.facebook.com/kkdkorea1937"
-                ><img src="images/sns (1).png" alt="face-book"
-              /></a>
+              <a href="https://www.facebook.com/kkdkorea1937">
+                <img src="images/sns(1).png" alt="face-book" />
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/krispykremekr"
-                ><img src="images/sns (2).png" alt="twitter"
-              /></a>
+              <a href="https://twitter.com/krispykremekr">
+                <img src="images/sns(2).png" alt="twitter" />
+              </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/krispykremekr/"
-                ><img src="images/sns (3).png" alt="instagram"
-              /></a>
+              <a href="https://www.instagram.com/krispykremekr/">
+                <img src="images/sns(3).png" alt="instagram" />
+              </a>
             </li>
           </ul>
         </div>
