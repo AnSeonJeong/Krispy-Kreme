@@ -1,11 +1,14 @@
 @import url("https://webfontworld.github.io/nyj/NYJGothic.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;600;700;800&family=PT+Serif:ital@1&family=Roboto&family=Source+Sans+Pro:wght@600;700&display=swap");
+@import url("https://webfontworld.github.io/pretendard/Pretendard.css");
 
 :root {
   --main-color: #00704a;
+  --sub-color: #d31145;
   --white-color: #fcfcfc;
   --bg-color: #f1f1f1;
+  --font-color: #2c2c2c;
   --font-EB: 800;
+  --font-B: 700;
   --font-R: 300;
 }
 
@@ -13,6 +16,7 @@ body,
 html {
   font-family: "NYJGothic", sans-serif;
   background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 a {
@@ -85,7 +89,7 @@ a {
 
 .nav .sub {
   position: absolute;
-  font-family: "Noto-Sans", sans-serif;
+  font-family: "Pretendard", sans-serif;
   width: 100%;
   top: 29.5px;
   left: 0;
@@ -96,6 +100,10 @@ a {
   display: block;
   line-height: 3;
   padding: 0;
+}
+
+.nav .sub li:hover {
+  color: var(--main-color);
 }
 
 #header:hover {
@@ -136,6 +144,7 @@ a {
   height: 80px;
   background-color: var(--main-color);
   float: right;
+  cursor: pointer;
 }
 
 .ham_bar {
@@ -156,7 +165,7 @@ a {
 }
 
 #footer {
-  font-family: "Noto-Sans", sans-serif;
+  font-family: "Pretendard", sans-serif;
 }
 
 .footer_contents {
@@ -199,11 +208,11 @@ a {
 }
 
 .footer_menu li:not(:last-child) {
-  padding-right: 67px;
+  padding-right: 70px;
 }
 
 .footer_menu li a {
-  font-size: 16px;
+  font-size: 16.8px;
   font-weight: var(--font-EB);
   color: var(--main-color);
 }
