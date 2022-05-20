@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header_and_footer.css" />
     <link rel="stylesheet" href="css/main_style.css" />
+    <script src="js/product_slide.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -83,9 +85,9 @@
         <div class="num"></div>
       </div>
       <div class="slide_wrap">
-        <div class="slide">
-          <img src="images/home.jpg" alt="home_background" />
-          <div class="slide_text">
+        <div class="slide slide_1">
+          <img src="images/home.jpg" class="home_img_1" alt="home_background" />
+          <div class="slide_text text_1">
             <span>JULY 13, 1937</span>
             <span>we opend our doors on</span>
             <p>
@@ -94,9 +96,9 @@
             </p>
           </div>
         </div>
-        <div class="slide">
-          <img src="images/home.png" alt="home_background" />
-          <div class="slide_text">
+        <div class="slide slide_2">
+          <img src="images/home.png" class="home_img_2" alt="home_background" />
+          <div class="slide_text text_2">
             <p>
               달콤하고 부드러운 오리지널 글레이즈드<br />
               향긋한 아메리카노를 곁들이면 달콤함이 배가 됩니다
@@ -117,48 +119,60 @@
         </h1>
         <div class="center">
           <button class="product_btn product_prev"></button>
-          <ul class="content">
-            <li class="product_img">
-              <div class="photo_box">
-                <img src="images/product_bg(1).jpg" alt="background" />
-                <img src="images/product(1).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 블라썸</li>
-                <li>Strawberry Blossom</li>
-              </ul>
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img src="images/product_bg(2).jpg" alt="background" />
-                <img src="images/product(2).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 티라미수 크림</li>
-                <li>Strawberry Tiramisu Cream</li>
-              </ul>
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img src="images/product_bg(3).jpg" alt="background" />
-                <img src="images/product(3).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 에끌레어</li>
-                <li>Strawberry Eclair</li>
-              </ul>
-            </li>
-            <li class="product_img">
-              <div class="photo_box">
-                <img src="images/product_bg(4).jpg" alt="background" />
-                <img src="images/product(4).png" alt="doughnut_img" />
-              </div>
-              <ul class="product_box">
-                <li>딸기 브라운 치즈</li>
-                <li>Strawberry Brown Cheese</li>
-              </ul>
-            </li>
-          </ul>
+          <div class="content_wrap">
+            <ul class="content">
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(1).jpg" alt="background" />
+                  <img src="images/product(1).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 블라썸</li>
+                  <li>Strawberry Blossom</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(2).jpg" alt="background" />
+                  <img src="images/product(2).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 티라미수 크림</li>
+                  <li>Strawberry Tiramisu Cream</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(3).jpg" alt="background" />
+                  <img src="images/product(3).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 에끌레어</li>
+                  <li>Strawberry Eclair</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(4).jpg" alt="background" />
+                  <img src="images/product(4).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 브라운 치즈</li>
+                  <li>Strawberry Brown Cheese</li>
+                </ul>
+              </li>
+              <li class="product_img">
+                <div class="photo_box">
+                  <img src="images/product_bg(5).jpg" alt="background" />
+                  <img src="images/product(5).png" alt="doughnut_img" />
+                </div>
+                <ul class="product_box">
+                  <li>딸기 초코케익</li>
+                  <li>Strawberry Chococake</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="product_btn product_next"></button>
         </div>
         <button type="button" onclick="location.href='sub2.html';">
