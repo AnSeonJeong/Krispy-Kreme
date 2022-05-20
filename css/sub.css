@@ -65,12 +65,13 @@ p {
   background: url("../images/story_bg(1).png") no-repeat 150% -5%,
     url("../images/story_bg(2).png") no-repeat -1% 30%;
   background-size: 60%;
+  overflow-x: hidden;
 }
 
 .story_wrap {
-  /* height: 750px; */
-  margin-left: 7%;
+  /* margin-left: 7%; */
   padding-bottom: 214px;
+  text-align: center;
 }
 
 .story_2 {
@@ -86,14 +87,22 @@ p {
   left: -231px;
   top: 270px;
   z-index: 2;
+  opacity: 0;
 }
 
 .story_wrap div {
-  float: left;
+  /* float: left; */
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .story_content {
   position: relative;
+  margin-right: 3%;
+}
+
+.story_content.transition {
+  transition: 0.5s;
 }
 
 .story_content iframe {
@@ -129,6 +138,37 @@ p {
   right: -30px;
 }
 
+.story_content.odd::after {
+  animation: moveBox 0.5s 0.5s ease both;
+}
+.story_content.even::after {
+  animation: moveBox 0.5s 0.5s ease both;
+}
+
+.story_content.even .neon {
+  animation: neon 1.5s ease 0.5s both;
+}
+
+@keyframes moveBox {
+  0% {
+    opacity: 0;
+    transform: translate(-30px, -30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes neon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .story_wrap:nth-child(odd) .story_desc {
   margin-left: 11.5%;
 }
@@ -138,17 +178,10 @@ p {
   margin-left: 5%;
 }
 
-.story_wrap:nth-child(2) .story_desc,
-.story_wrap:nth-child(2) .story_desc {
-  padding-top: 140px;
-}
-
-.story_wrap:last-child .story_desc {
-  padding-top: 180px;
-}
-
 .story_desc {
-  padding-top: 5%;
+  opacity: 0;
+  text-align: left;
+  transition: 1.5s;
 }
 
 .story_desc h2 {
@@ -263,6 +296,7 @@ p {
 #share_the_love ul {
   text-align: center;
   padding-bottom: 10%;
+  overflow-y: hidden;
 }
 
 #share_the_love ul li {
@@ -272,6 +306,7 @@ p {
   border-radius: 20px;
   margin: 0 22px;
   vertical-align: top;
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.04);
 }
 
 #share_the_love ul li > img {
@@ -529,6 +564,13 @@ p {
   font-weight: var(--font-R);
   font-family: "Pretendard", sans-serif;
   padding-top: 17px;
+}
+
+.menu_box .ice li:nth-child(1) .menu_name li,
+.menu_box .ice li:nth-child(2) .menu_name li,
+.menu_box .ice li:nth-child(3) .menu_name li {
+  margin: 0 28px;
+  line-height: 1.3;
 }
 
 .menu button {
