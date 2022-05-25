@@ -23,6 +23,7 @@ a {
   text-decoration: none;
 }
 
+/* header */
 #header {
   height: 80px;
   position: fixed;
@@ -101,7 +102,7 @@ a {
   padding: 0;
 }
 
-.nav .sub li:hover {
+.nav .sub > li:hover {
   color: var(--main-color);
 }
 
@@ -116,15 +117,15 @@ a {
   display: block;
 }
 
-#header:hover a {
+#header:hover .nav a {
   color: var(--main-color);
 }
 
-#header:hover #ham {
+#header:hover > #ham {
   background-color: var(--white-color);
 }
 
-#header:hover .ham_bar li {
+#header:hover > .ham_bar > li {
   background-color: var(--main-color);
 }
 
@@ -144,17 +145,20 @@ a {
   height: 80px;
   background-color: var(--main-color);
   float: right;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .ham_bar {
   width: 34px;
   height: 24px;
   margin: 28px auto;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
 }
 
 .ham_bar li {
-  width: 100%;
+  width: 90%;
   height: 3px;
   background-color: var(--white-color);
   border-radius: 10px;
@@ -164,6 +168,87 @@ a {
   margin-top: 7px;
 }
 
+.ham_bar li:first-child {
+  transform: rotate(0);
+  transition: 0.4s;
+}
+.ham_bar li:nth-child(2) {
+  transform: scaleY(100%);
+  transition: 0.2s;
+}
+.ham_bar li:last-child {
+  transform: rotate(0);
+  transition: 0.4s;
+}
+
+.ham_bar.active li:first-child {
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.ham_bar.active li:nth-child(2) {
+  transform: scaleY(0);
+}
+
+.ham_bar.active li:last-child {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.ham_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  text-align: center;
+  background: url("../images/ham_img.png") no-repeat 98% 95%/25%,
+    url("../images/big_logo.png") no-repeat 50% 50%/85%;
+  background-color: var(--main-color);
+  transform: translateX(100%);
+}
+
+.ham_menu.active {
+  transform: translateX(0);
+}
+
+.ham_menu > div > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding-top: 100px;
+}
+
+.ham_menu > div > li:nth-child(1) {
+  margin-right: 20%;
+}
+
+.ham_menu > div > li > a {
+  font-size: 60px;
+  font-weight: var(--font-EB);
+  color: #ffc74e;
+}
+
+.ham_menu > div li {
+  text-align: left;
+}
+
+.ham_menu > div > li ul li {
+  color: var(--white-color);
+  font-size: 30px;
+  font-weight: var(--font-R);
+}
+
+.ham_sub {
+  margin-top: 50px;
+}
+
+.ham_sub li {
+  line-height: 1.8;
+}
+
+/* footer */
 #footer {
   font-family: "Pretendard", sans-serif;
 }
