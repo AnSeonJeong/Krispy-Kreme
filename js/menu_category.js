@@ -12,6 +12,12 @@ function hiddenBtn() {
   menuBtn.classList.add(HIDDEN);
 }
 
+function setClass(box1, box2, box3) {
+  box1.classList.remove(HIDDEN);
+  box2.classList.add(HIDDEN);
+  box3.classList.add(HIDDEN);
+}
+
 menuBtn.addEventListener("click", hiddenBtn);
 
 function showMenu(e) {
@@ -23,19 +29,13 @@ function showMenu(e) {
       icecreamBox.classList.remove(HIDDEN);
       break;
     case "도넛":
-      doughnutsBox.classList.remove(HIDDEN);
-      drinksBox.classList.add(HIDDEN);
-      icecreamBox.classList.add(HIDDEN);
+      setClass(doughnutsBox, drinksBox, icecreamBox);
       break;
     case "커피 / 음료":
-      drinksBox.classList.remove(HIDDEN);
-      doughnutsBox.classList.add(HIDDEN);
-      icecreamBox.classList.add(HIDDEN);
+      setClass(drinksBox, doughnutsBox, icecreamBox);
       break;
     case "아이스크림 / 프로즌":
-      icecreamBox.classList.remove(HIDDEN);
-      doughnutsBox.classList.add(HIDDEN);
-      drinksBox.classList.add(HIDDEN);
+      setClass(icecreamBox, doughnutsBox, drinksBox);
       break;
   }
 }
