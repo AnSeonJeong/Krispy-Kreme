@@ -25,7 +25,7 @@ const DRAW = "draw";
 
 let storyPosArr = [];
 for (let i = 0; i < storyCon.length; i++) {
-  const storyPos = storyCon[i].offsetTop - 700;
+  const storyPos = storyCon[i].offsetTop - 800;
   storyPosArr.push(storyPos);
 }
 
