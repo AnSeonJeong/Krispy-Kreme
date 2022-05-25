@@ -53,7 +53,8 @@ const fonts = document.querySelectorAll(".nav ul li a");
 const homeserviceList = document.querySelectorAll("#homeservice .content li");
 const homeserviceImg = document.querySelector(".homeservice_bottom img");
 const headerLogo = document.querySelector("#logo img:nth-child(2)");
-const progressNum = document.querySelector("#progress .num:first-child");
+const progressNum = document.querySelectorAll("#progress .num");
+const progressBar = document.querySelector("#progress .bar div");
 
 const BLACK = "black";
 const MOVE = "move";
@@ -75,6 +76,27 @@ function animate(distance, sectionArr) {
   }
 }
 
+let currentPage = 1;
+function progress(p, num) {
+  progressBar.style.height = `${p * num}%`;
+  progressNum[0].innerText = `0${num}`;
+  currentPage = num;
+}
+
+function removeClass() {
+  progressBar.classList.remove(BLACK);
+  progressNum.forEach((num) => {
+    num.classList.remove(BLACK);
+  });
+}
+
+function addClass() {
+  progressBar.classList.add(BLACK);
+  progressNum.forEach((num) => {
+    num.classList.add(BLACK);
+  });
+}
+
 function scrollPage(e) {
   e.preventDefault();
   let currentScroll = document.body.scrollTop
@@ -85,6 +107,7 @@ function scrollPage(e) {
   const sectionHeight = section[0].offsetHeight;
   const footerHeight = footer.offsetHeight;
   let lastScroll = pageHeight - sectionHeight - footerHeight;
+  const percent = (sectionHeight / (pageHeight - footerHeight)) * 100;
   let distance = 0;
 
   let sectionArr = [];
@@ -92,7 +115,7 @@ function scrollPage(e) {
     sectionScrollTop = section[i].offsetTop;
     sectionArr.push(sectionScrollTop);
   }
-  console.log(sectionArr);
+
   if (e.deltaY > 0) {
     // scroll down
     if (currentScroll >= pageHeight - sectionHeight) return;
@@ -102,8 +125,6 @@ function scrollPage(e) {
     distance -= over;
     document.documentElement.scrollTo(0, distance);
 
-    console.log(currentScroll + sectionHeight, distance);
-
     fonts.forEach((font) => {
       if (
         (distance >= sectionArr[1] && distance < sectionArr[2]) ||
@@ -111,12 +132,21 @@ function scrollPage(e) {
       ) {
         font.classList.add(BLACK);
         headerLogo.src = "images/header_logo_2_green.png";
+        addClass();
       } else {
         font.classList.remove(BLACK);
         headerLogo.src = "images/header_logo_2.png";
+        removeClass();
       }
     });
+
     animate(distance, sectionArr);
+
+    if (currentScroll + sectionHeight === distance) {
+      if (currentScroll !== lastScroll) {
+        progress(percent, currentPage + 1);
+      }
+    }
   } else if (e.deltaY < 0) {
     // scroll up
     if (currentScroll === 0) return;
@@ -134,11 +164,18 @@ function scrollPage(e) {
         if (distance === sectionArr[0] || distance === sectionArr[2]) {
           font.classList.remove("black");
           headerLogo.src = "images/header_logo_2.png";
+          removeClass();
         } else {
           font.classList.add("black");
           headerLogo.src = "images/header_logo_2_green.png";
+          addClass();
         }
       });
+
+      if (currentScroll - sectionHeight === distance) {
+        progress(percent, currentPage - 1);
+      }
+
       animate(distance, sectionArr);
     }
   }

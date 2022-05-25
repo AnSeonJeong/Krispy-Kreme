@@ -60,31 +60,37 @@ button {
 }
 
 #progress .bar {
-  /* position: relative; */
+  position: relative;
   height: 180px;
   width: 3px;
-  opacity: 0.38;
+  /* opacity: 0.38; */
   background-color: var(--white-color);
-  /* background-color: #aeafb0; */
+  background-color: #a19f9f;
   margin: 0 auto;
 }
 
-/* #progress .bar::after {
-  content: "";
-  display: block;
+#progress .bar div.black {
+  background-color: var(--font-color);
+}
+
+#progress .num.black {
+  color: var(--font-color);
+}
+
+#progress .bar div {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 6;
   width: 100%;
-  height: 180px;
+  height: 16.66%;
   background-color: var(--white-color);
-} */
+  transition: 0.5s;
+}
 
 #progress .num {
   color: var(--white-color);
   font-size: 22px;
-  font-weight: var(--font-B);
+  font-weight: var(--font-EB);
 }
 
 #progress .num:last-child {
@@ -130,7 +136,7 @@ button {
 #home .slide .home_img_1 {
   width: 85%;
   opacity: 0;
-  animation: showImg ease-out 1.5s both;
+  animation: showImg ease-out 1.2s both;
 }
 
 @keyframes showImg {
@@ -185,7 +191,7 @@ button {
 
 #home .slide .home_img_2 {
   height: 100%;
-  animation: showImg ease-out 1.5s both;
+  animation: showImg ease-out 1.2s both;
 }
 
 #home .slide .text_2 {
@@ -475,6 +481,7 @@ button {
   bottom: 28px;
   left: 120px;
   height: 140%;
+  transform: translateX(-120%);
 }
 
 .homeservice_bottom img.move {
@@ -483,7 +490,7 @@ button {
 
 @keyframes movingCar {
   0% {
-    transform: translateX(0);
+    transform: translateX(-120%);
   }
   100% {
     transform: translateX(310%);
