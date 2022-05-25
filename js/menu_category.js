@@ -6,15 +6,16 @@ const drinksBox = menuBox.querySelector(".drink");
 const icecreamBox = menuBox.querySelector(".ice");
 
 const HIDDEN = "hidden";
-
-menuBtn.addEventListener("click", () => {
+function hiddenBtn() {
   menuBox.style.height = "auto";
   menuBox.style.overflow = "visible";
   menuBtn.classList.add(HIDDEN);
-});
+}
+
+menuBtn.addEventListener("click", hiddenBtn);
 
 function showMenu(e) {
-  console.dir(e.target.innerText);
+  hiddenBtn();
   switch (e.target.innerText) {
     case "전체":
       doughnutsBox.classList.remove(HIDDEN);
