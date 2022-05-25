@@ -57,7 +57,6 @@ a {
 }
 
 .nav .menu li {
-  /* width: 182px; */
   position: relative;
   padding-right: 100px;
 }
@@ -79,7 +78,7 @@ a {
   margin-top: 5px;
 }
 
-.nav .menu > li:hover a::after {
+.nav .menu > li:hover > a::after {
   width: 100%;
 }
 
@@ -93,7 +92,7 @@ a {
   width: 100%;
   top: 29.5px;
   left: 0;
-  opacity: 0;
+  display: none;
 }
 
 .nav .sub li {
@@ -114,6 +113,7 @@ a {
 
 #header:hover .sub {
   animation: sub 0.2s ease-in-out both;
+  display: block;
 }
 
 #header:hover a {
