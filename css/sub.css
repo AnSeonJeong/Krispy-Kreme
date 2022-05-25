@@ -69,9 +69,11 @@ p {
 }
 
 .story_wrap {
-  /* margin-left: 7%; */
-  padding-bottom: 214px;
   text-align: center;
+}
+
+.story_wrap:not(:last-child) {
+  padding-bottom: 214px;
 }
 
 .story_2 {
@@ -90,8 +92,11 @@ p {
   opacity: 0;
 }
 
+.story_4 {
+  padding-bottom: 50px;
+}
+
 .story_wrap div {
-  /* float: left; */
   display: inline-block;
   vertical-align: middle;
 }
@@ -170,7 +175,7 @@ p {
 }
 
 .story_wrap:nth-child(odd) .story_desc {
-  margin-left: 11.5%;
+  margin-left: 9%;
 }
 
 .story_wrap:nth-child(even) .story_desc {
@@ -197,6 +202,100 @@ p {
   font-size: 20px;
   font-weight: var(--font-R);
   line-height: 1.6;
+}
+
+.story_3 .story_desc {
+  position: relative;
+  z-index: 1;
+}
+
+.story_4 .story_content {
+  z-index: 1;
+}
+
+#crs {
+  position: relative;
+  right: -30%;
+  bottom: 201px;
+  opacity: 0.3;
+  stroke-width: 2;
+  fill: transparent;
+}
+
+#crs.fill {
+  animation: fillAnim 1.5s ease both 2s;
+}
+
+#path_c.draw {
+  animation: lineAnim 2s ease both;
+}
+#path_r.draw {
+  animation: lineAnim 2s ease both 0.8s;
+}
+#path_s.draw {
+  animation: lineAnim 2s ease both 1.6s;
+}
+
+#dozen_box {
+  position: relative;
+  left: -12%;
+  bottom: 130px;
+  fill: transparent;
+  stroke-width: 2;
+  opacity: 0.16;
+}
+
+#dozen_box.fill {
+  animation: fillAnim_2 1.5s ease both 2s;
+}
+
+#path_d.draw {
+  animation: lineAnim 2s ease both;
+}
+#path_o.draw {
+  animation: lineAnim 2s ease both 0.5s;
+}
+#path_z.draw {
+  animation: lineAnim 2s ease both 0.75s;
+}
+#path_e.draw {
+  animation: lineAnim 2s ease both 1s;
+}
+#path_n.draw {
+  animation: lineAnim 2s ease both 1.25s;
+}
+#path_b.draw {
+  animation: lineAnim 2s ease both 1.5s;
+}
+#path_o_2.draw {
+  animation: lineAnim 2s ease both 1.75s;
+}
+#path_x.draw {
+  animation: lineAnim 2s ease both 2s;
+}
+
+@keyframes lineAnim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillAnim {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #d6c21e;
+  }
+}
+
+@keyframes fillAnim_2 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #016d48;
+  }
 }
 
 /* sub1 : history */
