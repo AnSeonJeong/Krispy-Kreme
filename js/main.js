@@ -6,6 +6,7 @@ const homeSlideList = homeSlide.querySelectorAll(".slide");
 
 let currentSlide = 0;
 const slideCount = homeSlideList.length;
+let toggle = false;
 
 function slide(num) {
   currentSlide = num;
@@ -16,9 +17,26 @@ function slide(num) {
   }
 }
 
-setInterval(() => {
+let timerId = setInterval(() => {
   slide(currentSlide - 1);
 }, 6000);
+
+function timer(btn, id) {
+  homeNextBtn.addEventListener("mouseenter", () => {
+    clearInterval(id);
+  });
+  homePrevBtn.addEventListener("mouseenter", () => {
+    clearInterval(id);
+  });
+  btn.addEventListener("mouseleave", () => {
+    id = setInterval(() => {
+      slide(currentSlide - 1);
+    }, 6000);
+  });
+}
+
+timer(homePrevBtn, timerId);
+timer(homeNextBtn, timerId);
 
 homePrevBtn.addEventListener("click", () => {
   slide(currentSlide + 1);

@@ -57,9 +57,26 @@ function productSlide(num) {
   }
 }
 
-setInterval(() => {
+let interval = setInterval(() => {
   productSlide(currentInx + 1);
 }, 2200);
+
+function productTimer(btn, id) {
+  productNextBtn.addEventListener("mouseenter", () => {
+    clearInterval(id);
+  });
+  productPrevBtn.addEventListener("mouseenter", () => {
+    clearInterval(id);
+  });
+  btn.addEventListener("mouseleave", () => {
+    id = setInterval(() => {
+      productSlide(currentInx + 1);
+    }, 2200);
+  });
+}
+
+productTimer(productPrevBtn, interval);
+productTimer(productNextBtn, interval);
 
 productPrevBtn.addEventListener("click", () => {
   productSlide(currentInx - 1);
