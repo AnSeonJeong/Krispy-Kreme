@@ -25,13 +25,13 @@ const DRAW = "draw";
 
 let storyPosArr = [];
 for (let i = 0; i < storyCon.length; i++) {
-  const storyPos = storyCon[i].offsetTop - 800;
+  const storyPos = storyCon[i].offsetTop - 1000;
   storyPosArr.push(storyPos);
 }
 
 const storyConWidth = storyCon[0].getBoundingClientRect().width + 260;
 const STLHeight = shareTheLoveList[0].getBoundingClientRect().height + 170;
-const STLPos = shareTheLove.offsetTop - 500;
+const STLPos = shareTheLove.offsetTop - 800;
 
 function hideStory() {
   storyCon[0].style.transform = `translateX(-${storyConWidth}px)`;
