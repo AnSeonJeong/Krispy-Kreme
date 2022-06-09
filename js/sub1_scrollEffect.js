@@ -1,3 +1,4 @@
+const storyTitle = document.querySelector("#story .content_title");
 const storyCon = document.querySelectorAll(".story_box .story_content");
 const storyWrap = document.querySelectorAll(".story_box .story_wrap");
 const storyDesc = document.querySelectorAll(".story_box .story_desc");
@@ -25,7 +26,7 @@ const DRAW = "draw";
 
 let storyPosArr = [];
 for (let i = 0; i < storyCon.length; i++) {
-  const storyPos = storyCon[i].offsetTop - 1000;
+  const storyPos = storyCon[i].offsetTop - storyTitle.offsetTop;
   storyPosArr.push(storyPos);
 }
 
@@ -60,8 +61,9 @@ hideSTL();
 
 window.addEventListener("scroll", () => {
   const currentScroll = document.body.scrollTop
-    ? document.body.scrlollTop
+    ? document.body.scrollTop
     : document.documentElement.scrollTop;
+  console.log(currentScroll);
   function originalPos(num, name, i) {
     if (currentScroll > storyPosArr[num]) {
       storyCon[num].style.transform = `translateX(0px)`;

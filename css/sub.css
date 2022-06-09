@@ -72,7 +72,7 @@ p {
   text-align: center;
 }
 
-.story_wrap:not(:last-child) {
+.story_wrap:not(:nth-child(3), :last-child) {
   padding-bottom: 214px;
 }
 
