@@ -63,7 +63,6 @@ window.addEventListener("scroll", () => {
   const currentScroll = document.body.scrollTop
     ? document.body.scrollTop
     : document.documentElement.scrollTop;
-  console.log(currentScroll);
   function originalPos(num, name, i) {
     if (currentScroll > storyPosArr[num]) {
       storyCon[num].style.transform = `translateX(0px)`;
